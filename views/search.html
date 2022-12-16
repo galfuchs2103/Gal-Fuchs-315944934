@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/WEB CSS.css">
+    <script defer src="../static/Fine Dine JS.js"></script>
+    <title>Find Dine - Search</title>
+
+</head>
+<body>
+<header>
+    <img src="../static/pics/small logo.png" alt="Find Dine Logo" class="logo"">
+    <div class="typewriter"><h1>חיפוש</h1></div>
+    <nav>
+        <ul>
+            <li><a href="Login & Sign-Up.html">כניסה והרשמה</a></li>
+            <li><a href="search.html">חיפוש</a></li>
+            <li><a href="results.html">תוצאות חיפוש</a></li>
+            <li><a href="Account.html">החשבון שלי</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h2>חיפוש שולחן</h2>
+<div class="container">
+    <form action="results.html" onsubmit="return empty()" method="get" class="search-form">
+        <div class="search-group">
+            <label>מספר סועדים:</label>
+            <input type="number" name="capacity">
+        </div>
+        <div class="search-group">
+            <label>שעה:</label>
+            <input type="time" name="time">
+        </div>
+        <div class="search-group">
+            <label>איזור גיאוגרפי:</label>
+            <input type="text" name="area">
+        </div>
+        <div class="search-group">
+            <label>סגנון מטבח:</label>
+            <input type="text" name="cuisine">
+        </div>
+        <div class="container">
+            <input type="submit" value="מצא לי שולחן!" name="submit">
+        </div>
+    </form>
+</div>
+<div class="container">
+    <div class="slider" id="main-slider">
+        <div class="slider-wrapper">
+            <img src="../static/pics/pasta.jpeg" alt="First" class="slide"/>
+            <img src="../static/pics/pizza.webp" alt="Second" class="slide"/>
+            <img src="../static/pics/salad.jpeg" alt="Third" class="slide"/>
+            <img src="../static/pics/burger.jpg" alt="Forth" class="slide"/>
+            <img src="../static/pics/Sushi-01.jpeg" alt="Fifth" class="slide"/>
+            <img src="../static/pics/Chicken-Pad-Thai_9-SQ copy.jpg" alt="Sixth" class="slide"/>
+        </div>
+    </div>
+</div>
+<footer>
+
+</footer>
+
+</body>
+</html>
