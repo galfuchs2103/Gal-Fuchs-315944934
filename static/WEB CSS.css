@@ -1,0 +1,308 @@
+* {
+    margin: 0.5vw;
+    padding: 0.5vw;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: cadetblue;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.active {
+    background-color: white;
+    color: darkslategrey;
+}
+
+
+
+.slider {
+    width: 400px;
+    /*margin: 2em auto;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.slide {
+    float: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+    opacity: 1;
+}
+
+.homepage {
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 150px;
+}
+
+footer {
+height: 7vw;
+    background-color: #94d7db;
+background-image: url("pics/small logo.png");
+    background-size: 5vw;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #94d7db;
+    color: #535353;
+}
+
+header.h1 {
+    color: #535353;
+    display: inline;
+}
+
+h2 {
+    color: #898b8c;
+    /*margin: 20px;*/
+
+}
+
+h3 {
+    color: #898b8c;
+}
+
+.my-form {
+    /*margin-top: 30px;*/
+    /*display: inline-block;*/
+    margin: 0.2vw;
+    padding: 0.2vw;
+
+}
+
+.my-form .my-group {
+
+}
+
+.my-form label {
+    display: block;
+    /*padding-bottom: 10px;*/
+    color: #535353;
+}
+
+.my-group input[type="text"], .my-group input[type="email"], .my-group textarea, .my-group input[type="password"], .my-group input[type="date"] {
+    /*padding: 0.5vw;*/
+    width: 15vw;
+    background-color: #ececec;
+    color: #535353;
+    border: none;
+    border-radius: 5px;
+}
+
+.my-form input[type="submit"] {
+    background-color: #ececec;
+    color: #535353;
+    border: none;
+    border-radius: 5px;
+    /*padding: 10px 15px;*/
+
+}
+
+.my-form input[type="submit"]:hover {
+    background-color: #94d7db;
+}
+.my-form.button {
+    background-color: #ececec;
+    color: #535353;
+    border: none;
+    border-radius: 5px;
+    /*padding: 10px 15px;*/
+
+}
+
+.my-form.button {
+    background-color: #94d7db;
+}
+
+/* Style the form - display items horizontally */
+.search-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Add some margins for each label */
+.search-form label {
+    margin: 8px;
+    display: block;
+    padding-bottom: 5px;
+    color: #535353;
+}
+
+/* Style the input fields */
+.search-form input {
+    padding: 5px;
+    width: 150px;
+    vertical-align: bottom;
+    margin: 5px 10px 5px 0;
+    background-color: #ececec;
+    color: #535353;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.search-form input[type="submit"] {
+    background-color: #ececec;
+    color: #535353;
+    border: none;
+    padding: 10px 15px;
+    vertical-align: text-top;
+    border-radius: 5px;
+    display: block;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #94d7db;
+
+
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 15vw 15vw;
+    gap: 0vw;
+}
+.grid-item {
+  font-size: 15px;
+  text-align: right;
+
+}
+
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+    .search-form input {
+        margin: 10px 0;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .slider, .slide, .slider-wrapper {
+        object-fit: scale-down;
+    }
+
+    .homepage {
+        width: 62vw;
+    }
+
+    .logo {
+        width: 20vw;
+        height: fit-content;
+    }
+
+}
+
+@keyframes my-animation {
+
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #94d7db;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  animation: typing 3s steps(30,end);
+}
+.typewriter h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  animation: typing 1.5s steps(30,end);
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
