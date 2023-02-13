@@ -1,0 +1,22 @@
+extends Layout
+block content
+  form#Account.my-form(action='/editAccount' onsubmit='return empty()' method='post')
+    h2 עריכת פרטים אישיים
+    h3 #{message}
+    .my-group
+      label(for='AccountEmail') כתובת Email:
+      input#AccountEmail(type='email' name='AccountEmail' value=res[0].email disabled='')
+    .my-group
+      label(for='AccountPassword') סיסמה:
+      input#AccountPassword(type='password' name='AccountPassword' value=res[0].password required='')
+    .my-group
+      label(for='AccountName') שם מלא:
+      input#AccountName(type='text' name='AccountName' value=res[0].name required='')
+    .my-group
+      label(for='AccountBirthdate') תאריך לידה:
+      input#AccountBirthdate(type='date' name='AccountBirthdate' value=res[0].birthdate disabled='')
+    .my-group
+      label(for='AccountAddress') כתובת:
+      input#AccountAddress(type='text' name='AccountAddress' value=res[0].address)
+    input(type='submit' value='שמירת השינויים' name='saveChanges')
+    input(type='submit' value='מחיקת משתמש' name='DeleteAccount' formaction='/deleteAccount')

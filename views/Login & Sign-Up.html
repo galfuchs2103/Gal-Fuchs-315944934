@@ -4,61 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/WEB CSS.css">
-    <script defer src="../static/Fine Dine JS.js"></script>
+    <link rel="stylesheet" href="WEB CSS.css">
+    <script defer src="Fine Dine JS.js"></script>
     <title>Find Dine - Login & Sign-Up</title>
 </head>
 <body>
 <header>
-    <img src="../static/pics/small logo.png" alt="Find Dine Logo" class="logo">
+    <img src="pics/small logo.png" alt="Find Dine Logo" class="logo">
     <div class="typewriter"><h1>כניסה / הרשמה לאתר</h1></div>
     <nav>
         <ul>
-            <li><a href="Login & Sign-Up.html">כניסה והרשמה</a></li>
-            <li><a href="search.html">חיפוש</a></li>
-            <li><a href="results.html">תוצאות חיפוש</a></li>
-            <li><a href="Account.html">החשבון שלי</a></li>
+            <li><a href="http://localhost:3000/LoginSignUp">כניסה והרשמה</a></li>
+            <li><a href="http://localhost:3000/search">חיפוש</a></li>
+            <li><a href="http://localhost:3000/results">תוצאות חיפוש</a></li>
+            <li><a href="http://localhost:3000/Account">החשבון שלי</a></li>
         </ul>
     </nav>
 </header>
 
 <div class="container">
-    <form id="login" action="search.html" onsubmit="return empty()" method="post" class="my-form">
+    <form id="login" action="/Login" onsubmit="return empty()" method="post" class="my-form">
         <h2>כניסה לאתר</h2>
         <div class="my-group">
-            <label>כתובת Email:</label>
-            <input type="email" name="email" required>
+            <label for="LoginEmail">כתובת Email:</label>
+            <input type="email" name="LoginEmail" id="LoginEmail" required>
         </div>
         <div class="my-group">
-            <label>סיסמה:</label>
-            <input type="password" name="password" required>
+            <label for="LoginPassword">סיסמה:</label>
+            <input type="password" name="LoginPassword" id="LoginPassword" required>
         </div>
-        <input type="submit" value="תנו לי להיכנס!" name="submit">
+        <input type="submit" value="תנו לי להיכנס!" name="LoginSubmit">
     </form>
 
-    <form id="sign-up" action="search.html" onsubmit="return empty()" method="post" class="my-form">
+    <form id="sign-up" action="/signUp" onsubmit="return empty()" method="post" class="my-form">
         <h2>הרשמה לאתר</h2>
         <div class="my-group">
-            <label>כתובת Email:</label>
-            <input type="email" name="email" required>
+            <label for="signUpEmail">כתובת Email:</label>
+            <input type="email" name="signUpEmail" id="signUpEmail" required>
         </div>
         <div class="my-group">
-            <label>סיסמה:</label>
-            <input type="password" name="password" required>
+            <label for="SignUpPassword">סיסמה:</label>
+            <input type="password" name="SignUpPassword" id="SignUpPassword" required>
         </div>
         <div class="my-group">
-            <label>שם מלא:</label>
-            <input type="text" name="name" required>
+            <label for="SignUpName">שם מלא:</label>
+            <input type="text" name="SignUpName" id="SignUpName" required>
         </div>
         <div class="my-group">
-            <label>תאריך לידה:</label>
-            <input type="date" name="birthdate" required>
+            <label for="SignUpBirthdate">תאריך לידה:</label>
+            <input type="date" name="SignUpBirthdate" id="SignUpBirthdate" required>
         </div>
         <div class="my-group">
-            <label>כתובת:</label>
-            <textarea name="address"></textarea>
+            <label for="SignUpAddress">כתובת:</label>
+            <input type="text" name="SignUpAddress" id="SignUpAddress">
         </div>
-        <input type="submit" value="בא לי להצטרף!" name="submit">
+        <input type="submit" value="בא לי להצטרף!" name="SighUpSubmit">
     </form>
 </div>
 <footer>

@@ -1,0 +1,33 @@
+extends Layout
+block content
+    .container
+      form#login.my-form(action='/Login' onsubmit='return empty()' method='get')
+        h2 כניסה לאתר
+        h3 #{message}
+        .my-group
+          label(for='LoginEmail') כתובת Email:
+          input#LoginEmail(type='email' name='LoginEmail' required='')
+        .my-group
+          label(for='LoginPassword') סיסמה:
+          input#LoginPassword(type='password' name='LoginPassword' required='')
+        input(type='submit' value='תנו לי להיכנס!' name='LoginSubmit')
+      form#sign-up.my-form(action='/signUp' onsubmit='return empty()' method='post')
+        h2 הרשמה לאתר
+        h3 #{message2}
+        .my-group
+          label(for='signUpEmail') כתובת Email:
+          input#signUpEmail(type='email' name='signUpEmail' required='')
+        .my-group
+          label(for='SignUpPassword') סיסמה:
+          input#SignUpPassword(type='password' name='SignUpPassword' required='')
+        .my-group
+          label(for='SignUpName') שם מלא:
+          input#SignUpName(type='text' name='SignUpName' required='')
+        .my-group
+          label(for='SignUpBirthdate') תאריך לידה:
+          input#SignUpBirthdate(type='date' name='SignUpBirthdate' required='')
+        .my-group
+          label(for='SignUpAddress') כתובת:
+          input#SignUpAddress(type='text' name='SignUpAddress')
+        input(type='submit' value='בא לי להצטרף!' name='SighUpSubmit')
+

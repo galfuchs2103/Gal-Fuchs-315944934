@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/WEB CSS.css">
-    <script defer src="../static/Fine Dine JS.js"></script>
+    <link rel="stylesheet" href="WEB CSS.css">
+    <script defer src="Fine Dine JS.js"></script>
     <title>Find Dine - Search Results</title>
 </head>
 <body>
 
 <header>
-    <img src="../static/pics/small logo.png" alt="Find Dine Logo" class="logo">
+    <img src="pics/small logo.png" alt="Find Dine Logo" class="logo">
     <div class="typewriter"><h1>תוצאות החיפוש</h1></div>
     <nav>
         <ul>
-            <li><a href="Login & Sign-Up.html">כניסה והרשמה</a></li>
-            <li><a href="search.html">חיפוש</a></li>
-            <li><a href="results.html">תוצאות חיפוש</a></li>
-            <li><a href="Account.html">החשבון שלי</a></li>
+            <li><a href="http://localhost:3000/LoginSignUp">כניסה והרשמה</a></li>
+            <li><a href="http://localhost:3000/search">חיפוש</a></li>
+            <li><a href="http://localhost:3000/results">תוצאות חיפוש</a></li>
+            <li><a href="http://localhost:3000/Account">החשבון שלי</a></li>
         </ul>
 
     </nav>
@@ -26,8 +26,8 @@
 </header>
 
 
-    <h2>תוצאות חיפוש</h2>
-    <h3>נמצאו 3 שולחנות פנויים עבורך במסעדות אסייתיות בתל אביב בשעה 18:00 עבור 4 סועדים:</h3>
+<h2>תוצאות חיפוש</h2>
+<h3>נמצאו 3 שולחנות פנויים עבורך במסעדות אסייתיות בתל אביב בשעה 18:00 עבור 4 סועדים:</h3>
 <div class="container">
     <main>
         <div class="grid-container">
@@ -40,11 +40,17 @@
 
         </div>
 
-        <button class="button" style="vertical-align:middle" onclick="window.location.href='https://biciclettatlv.co.il/';"><span>שמירת שולחן</span></button>
+        <button class="button" style="vertical-align:middle"
+                onclick="window.location.href='https://biciclettatlv.co.il/';"><span>שמירת שולחן</span></button>
         <button class="button" style="vertical-align:middle"><span>הוסף למועדפים</span></button>
+        <form>
+            <input type="button" onclick='/addToFavorites' value="w3docs"/>
+        </form>
     </main>
     <right>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.1019500309017!2d34.76832481587221!3d32.06649118119234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4c8311b328b5%3A0xb5f10524d03476af!2sBicicletta!5e0!3m2!1sen!2sil!4v1671112033577!5m2!1sen!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.1019500309017!2d34.76832481587221!3d32.06649118119234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4c8311b328b5%3A0xb5f10524d03476af!2sBicicletta!5e0!3m2!1sen!2sil!4v1671112033577!5m2!1sen!2sil"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
     </right>
 
 </div>

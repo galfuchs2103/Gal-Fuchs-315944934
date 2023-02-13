@@ -1,0 +1,33 @@
+extends Layout
+block content
+    h2 תוצאות החיפוש
+    each n in res
+      h3 #{message}
+      .container
+        main
+          .grid-container
+            .grid-item
+              h3 שם המסעדה
+            .grid-item
+              h4=n.restaurant
+            .grid-item
+              h3 כתובת
+            .grid-item
+              h4=n.address
+            .grid-item
+              h3 מס׳ טלפון
+            .grid-item
+              h4=n.phone_number
+            .grid-item
+              h3 מס׳ סועדים
+            .grid-item
+              h4=n.capacity
+            .grid-item
+              h3 שעה
+            .grid-item
+              h4=n.time
+          button.button(style='vertical-align:middle' onclick="window.location.href='"+n.link+"';")
+            span שמירת שולחן
+        right
+          iframe(src=n.map)
+

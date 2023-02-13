@@ -1,0 +1,33 @@
+extends Layout
+block content
+    h2 חיפוש שולחן
+    h3 #{message}
+    .container
+      form.search-form(action='/findTable' onsubmit='return empty()' method='get')
+        .search-group
+          label(for='capacity') מספר סועדים:
+          input#capacity(type='number' name='capacity')
+        .search-group
+          label(for='time') שעה:
+          input#time(type='time' name='time')
+        .search-group
+          label(for='area') איזור גיאוגרפי:
+          input#area(type='text' name='area')
+        .search-group
+          label(for='cuisine') סגנון מטבח:
+          //select#cuisine(name='cuisine')
+          //each n in res
+          //  option(value="'"+n.cuisine+"'") #{n.cuisine}
+          input#cuisine(type='text' name='cuisine')
+        .container
+          input(type='submit' value='מצא לי שולחן!' name='submitSearch')
+    .container
+      #main-slider.slider
+        .slider-wrapper
+          img.slide(src='pics/pasta.jpeg' alt='First')
+          img.slide(src='pics/pizza.webp' alt='Second')
+          img.slide(src='pics/salad.jpeg' alt='Third')
+          img.slide(src='pics/burger.jpg' alt='Forth')
+          img.slide(src='pics/Sushi-01.jpeg' alt='Fifth')
+          img.slide(src='pics/Chicken-Pad-Thai_9-SQ copy.jpg' alt='Sixth')
+
